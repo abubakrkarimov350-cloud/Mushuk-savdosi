@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mushuk Market 🐱</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#home" class="logo">🐾 Mushuk Market</a>
+
+        <nav>
+            <a href="#home">Bosh sahifa</a>
+            <a href="#cats">Mushuklar</a>
+            <a href="#about">Biz haqimizda</a>
+        </nav>
+
+        <button class="cart-btn" onclick="showCart()">
+            🛒 Savatcha (<span id="cart-count">0</span>)
+        </button>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>O'zingizga mos <span>mushukni</span> toping!</h1>
+            <p>Eng yoqimtoy mushuklar sizni kutmoqda.</p>
+            <a href="#cats" class="hero-btn">Mushuklarni ko'rish</a>
+        </div>
+        <div class="hero-image">🐈</div>
+    </section>
+
+    <main class="container" id="cats">
+        <h2>🐱 Bizning mushuklar</h2>
+        <p class="subtitle">O'zingiz yoqtirgan mushukni tanlang</p>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="search"
+                placeholder="Mushuk nomi yoki zotini qidiring..."
+            >
+        </div>
+
+        <div class="cat-grid" id="cat-list"></div>
+    </main>
+
+    <section class="about" id="about">
+        <h2>Biz haqimizda</h2>
+        <p>Mushuk Market — sevimli mushugingizni topishingiz uchun yaratilgan onlayn platforma.</p>
+        <p>📞 Aloqa: +998 90 123 45 67</p>
+    </section>
+
+    <footer>
+        <p>© 2026 Mushuk Market. Barcha huquqlar himoyalangan 🐾</p>
+    </footer>
+
+    <!-- Savatcha oynasi -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <button class="close-cart" onclick="closeCart()">✖</button>
+
+            <h2>🛒 Savatcham</h2>
+
+            <div id="cart-items"></div>
+
+            <h3>Jami: <span id="cart-total">0 so'm</span></h3>
+
+            <button class="checkout-btn" onclick="checkout()">
+                Buyurtma berish
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
